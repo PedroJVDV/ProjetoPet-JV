@@ -1,0 +1,48 @@
+package petshop;
+
+import java.util.Scanner;
+
+public class Executavel {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("=== SISTEMA PETSHOP ===");
+
+        System.out.print("Nome do animal: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Tipo: ");
+        String tipo = scanner.nextLine();
+
+        System.out.print("Raça: ");
+        String raca = scanner.nextLine();
+
+        System.out.print("Idade: ");
+        int idade = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("É importado? (true/false): ");
+        boolean importado = scanner.nextBoolean();
+
+        System.out.println("Sala desejada:\n1 - Clássica (R$55.0)\n2 - Premium (R$90.0)");
+        Sala sala = (scanner.nextInt() == 2) ? Sala.PREMIUM : Sala.CLASSICA;
+
+        Salas tratamento = new Salas(tipo, raca, idade, importado, sala);
+
+        System.out.println("\n=== DETALHES DO ATENDIMENTO ===");
+        System.out.printf("Nome: %s\nTipo: %s\nRaça: %s\nIdade: %d anos\nImportado: %s\nSala: %s\n",
+                nome, tipo, raca, idade, importado ? "Sim" : "Não", sala);
+
+        // Exemplo de produtos
+        tratamento.adicionarProduto(new Produto("Shampoo Antipulgas", 20.0));
+        tratamento.adicionarProduto(new Produto("Sabonete Neutro", 10.0));
+        tratamento.adicionarProduto(new Produto("Perfume Pet", 15.0));
+
+    // Mostrar produtos usados e atualizar o total
+        tratamento.mostrarProdutos();
+        tratamento.limpezaCompleta();
+        tratamento.mostrarDetalhes();
+
+        scanner.close();
+    }
+}
