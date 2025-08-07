@@ -1,0 +1,26 @@
+# Arquivos do IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Compilados Java
+*.class
+
+# Logs
+*.log
+
+# Configs do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Build (caso use alguma ferramenta como Maven ou Gradle)
+out/
+target/
+build/
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Backup de IDEs ou editores
+*~
