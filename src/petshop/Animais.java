@@ -14,14 +14,6 @@ public class Animais {
         this.importada = importada;
     }
 
-    public void exibirInfo() {
-        System.out.println("Tipo: " + tipoAnimal);
-        System.out.println("Raça: " + raca);
-        System.out.println("Idade: " + idade);
-        System.out.println("Importada: " + (importada ? "Sim" : "Não"));
-    }
-
-
 
     }
 

@@ -2,20 +2,8 @@ package petshop;
 
 public class Cachorro extends Animais {
 
-    boolean estaLimpo;
-    boolean agitado;
-
     public Cachorro(String tipoAnimal, String raca, int idade, boolean importada) {
         super(tipoAnimal, raca, idade, importada);
-    }
-
-    public void verificadorDeLimpeza() {
-        System.out.println(estaLimpo ? "Está limpo!" : "Está sujo!");
-    }
-
-    public void comportamentoDoCachorro() {
-        System.out.println(agitado ? "Está agitado!" : "Está calmo!");
-
     }
 
 

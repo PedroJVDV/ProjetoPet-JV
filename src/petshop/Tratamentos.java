@@ -41,6 +41,7 @@ public class Tratamentos extends Animais {
     }
 
     // Método para adicionar produto
+
     public void adicionarProduto(Produto produto) {
         produtosUsados.add(produto);
     }
